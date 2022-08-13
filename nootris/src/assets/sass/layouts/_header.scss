@@ -2,6 +2,9 @@
   display: flex;
   height: 80px;
   background-color: $dark;
+  @include tablet {
+    height: 60px;
+  }
 }
 
 .header__container {
@@ -14,16 +17,46 @@
 
 .header__logo {
   margin-right: 50px;
+  @include desctop {
+    margin-right: 10px;
+  }
+  @include laptop {
+    margin-right: 0px;
+  }
+  @include tablet {
+    order: 1;
+  }
 }
 
 .header__menu {
   width: 55%;
+  @include laptop {
+    width: 75%;
+  }
+  @include tablet {
+    display: none;
+  }
 }
 
 .header__number {
   margin-right: 38px;
+  @include desctop {
+    margin-right: 10px;
+  }
+  @include laptop {
+    display: none;
+  }
 }
 
 .header__cart {
   margin-right: 20px;
+  @include desctop {
+    margin-right: 10px;
+  }
+  @include laptop {
+    margin-right: 0px;
+  }
+  @include tablet {
+    order: 2;
+  }
 }

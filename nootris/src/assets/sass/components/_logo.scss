@@ -1,8 +1,12 @@
 .logo {
   display: block;
   width: 120px;
-  height: 34.53px;
+  height: 34px;
   background-image: url('../img/logo.svg');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
+  @include tablet {
+    transform: scale(0.8);
+  }
 }
