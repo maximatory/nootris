@@ -8,10 +8,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles/style.css">
   <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/sass/style.css">
 </head>
 <body>
-  <header class="header"></header>
+  <header class="header">
+    <div class="container header__container">
+      <h1>Nootris</h1>
+      <a class="logo header__logo" href="index.html"></a>
+      <nav class="menu header__menu">
+        <ul class="menu__list">
+          <li class="menu__linst-item">
+            <a class="menu__link" href="#">FAQ</a>
+          </li>
+          <li class="menu__linst-item">
+            <a class="menu__link" href="#">Оплата и доставка</a>
+          </li>
+          <li class="menu__linst-item">
+            <a class="menu__link" href="#">Возврат</a>
+          </li>
+          <li class="menu__linst-item">
+            <a class="menu__link" href="#">Исследования</a>
+          </li>
+          <li class="menu__linst-item">
+            <a class="menu__link" href="#">Личный кабинет</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__number" href="tel:888006000990">8 8 (800) 600-09-90</a>
+      <div class="cart header__cart">
+        <cart class="cart__quantity">1</cart>
+      </div>
+    </div>
+  </header>
 </body>
 </html>

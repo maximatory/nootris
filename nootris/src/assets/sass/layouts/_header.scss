@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  height: 80px;
+  background-color: $dark;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.header__logo {
+  margin-right: 50px;
+}
+
+.header__menu {
+  width: 55%;
+}
+
+.header__number {
+  margin-right: 38px;
+}
+
+.header__cart {
+  margin-right: 20px;
+}
