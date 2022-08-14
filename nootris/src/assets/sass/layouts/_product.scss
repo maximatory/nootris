@@ -1,0 +1,96 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4.31vw 0;
+  background-image: url('../img/product/bg.png');
+  background-position: center -81px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.product__main-title {
+  margin-top: 2.99vw;
+  max-width: 70vw;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (144 - 20) + 20px);
+  line-height: 10.56vw;
+  font-weight: 700;
+  margin-bottom: 2.15vw;
+  color: $white;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.product__main-subtitle {
+  max-width: 45vw;
+  margin-bottom: 7.5vw;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 18) + 18px);
+  line-height: 1.94vw;
+  @include laptop {
+    max-width: 48vw;
+    line-height: 20px;
+  }
+}
+
+.product__mini-title {
+  margin-bottom: 0.6vw;
+  text-transform: uppercase;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (36 - 20) + 20px);
+  line-height: 2.92vw;
+  font-weight: 700;
+  @include laptop {
+    line-height: 30px;
+  }
+}
+
+.product__mini-subtitle {
+  max-width: 24vw;
+  margin-bottom: 2.22vw;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (18 - 16) + 16px);
+  line-height: 1.46vw;
+  font-weight: 400;
+  @include laptop {
+    max-width: 30vw;
+    line-height: 16px;
+  }
+}
+
+.product__img-nootris {
+  background-image: url('../img/product/nootris.png');
+  width: 15.56vw;
+  height: 44.10vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 4.44vw;
+  right: 10.11vw;
+  z-index: 1;
+}
+
+.product__img-lemon {
+  width: 37.01vw;
+  height: 32.08vw;
+  background-image: url('../img/product/lemon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 30.7vw;
+  right: 16vw;
+  position: absolute;
+  z-index: 2;
+}
+
+.product__img-ginger {
+  width: 34.44vw;
+  height: 28.33vw;
+  background-image: url('../img/product/ginger.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 18.9vw;
+  right: 3.4vw;
+  position: absolute;
+  z-index: 0;
+}

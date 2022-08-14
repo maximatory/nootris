@@ -16,7 +16,7 @@
 
 
 .header__logo {
-  margin-right: 50px;
+  margin-right: 4.17vw;
   @include desctop {
     margin-right: 10px;
   }
@@ -29,7 +29,7 @@
 }
 
 .header__menu {
-  width: 55%;
+  width: 55.5%;
   @include laptop {
     width: 75%;
   }
@@ -39,9 +39,9 @@
 }
 
 .header__number {
-  margin-right: 38px;
+  margin-right: 3.13vw;
   @include desctop {
-    margin-right: 10px;
+    margin-right: 0;
   }
   @include laptop {
     display: none;
@@ -49,12 +49,9 @@
 }
 
 .header__cart {
-  margin-right: 20px;
+  margin-right: 0.56vw;
   @include desctop {
-    margin-right: 10px;
-  }
-  @include laptop {
-    margin-right: 0px;
+    margin-right: 0;
   }
   @include tablet {
     order: 2;

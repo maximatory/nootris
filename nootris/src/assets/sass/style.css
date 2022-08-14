@@ -13,10 +13,6 @@ li {
   list-style-type: none;
 }
 
-html {
-  font-size: 10px;
-}
-
 body {
   font-family: 'Rubik', Arial, sans-serif;
 }
@@ -25,25 +21,7 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  padding: 0 64px;
-}
-
-@media (max-width: 1280px) {
-  .container {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .container {
-    padding: 0 30px;
-  }
-}
-
-@media (max-width: 880px) {
-  .container {
-    padding: 0 20px;
-  }
+  padding: 0 4.44vw;
 }
 
 h1 {
@@ -55,15 +33,9 @@ h1 {
 
 a {
   color: #FFFFFF;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
+  font-size: calc( (100vw - 880px)/(1440 - 880) * (18 - 16) + 16px);
+  line-height: 1.67vw;
   font-weight: 400;
-}
-
-@media (max-width: 1280px) {
-  a {
-    font-size: 1.6rem;
-  }
 }
 
 a:hover {
@@ -99,7 +71,7 @@ a:hover {
 }
 
 .header__logo {
-  margin-right: 50px;
+  margin-right: 4.17vw;
 }
 
 @media (max-width: 1280px) {
@@ -123,7 +95,7 @@ a:hover {
 }
 
 .header__menu {
-  width: 55%;
+  width: 55.5%;
 }
 
 @media (max-width: 1080px) {
@@ -139,12 +111,12 @@ a:hover {
 }
 
 .header__number {
-  margin-right: 38px;
+  margin-right: 3.13vw;
 }
 
 @media (max-width: 1280px) {
   .header__number {
-    margin-right: 10px;
+    margin-right: 0;
   }
 }
 
@@ -155,18 +127,12 @@ a:hover {
 }
 
 .header__cart {
-  margin-right: 20px;
+  margin-right: 0.56vw;
 }
 
 @media (max-width: 1280px) {
   .header__cart {
-    margin-right: 10px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .header__cart {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -176,6 +142,125 @@ a:hover {
         -ms-flex-order: 2;
             order: 2;
   }
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 4.31vw 0;
+  background-image: url("../img/product/bg.png");
+  background-position: center -81px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.product__main-title {
+  margin-top: 2.99vw;
+  max-width: 70vw;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (144 - 20) + 20px);
+  line-height: 10.56vw;
+  font-weight: 700;
+  margin-bottom: 2.15vw;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.product__main-subtitle {
+  max-width: 45vw;
+  margin-bottom: 7.5vw;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 18) + 18px);
+  line-height: 1.94vw;
+}
+
+@media (max-width: 1080px) {
+  .product__main-subtitle {
+    max-width: 48vw;
+    line-height: 20px;
+  }
+}
+
+.product__mini-title {
+  margin-bottom: 0.6vw;
+  text-transform: uppercase;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (36 - 20) + 20px);
+  line-height: 2.92vw;
+  font-weight: 700;
+}
+
+@media (max-width: 1080px) {
+  .product__mini-title {
+    line-height: 30px;
+  }
+}
+
+.product__mini-subtitle {
+  max-width: 24vw;
+  margin-bottom: 2.22vw;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (18 - 16) + 16px);
+  line-height: 1.46vw;
+  font-weight: 400;
+}
+
+@media (max-width: 1080px) {
+  .product__mini-subtitle {
+    max-width: 30vw;
+    line-height: 16px;
+  }
+}
+
+.product__img-nootris {
+  background-image: url("../img/product/nootris.png");
+  width: 15.56vw;
+  height: 44.10vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 4.44vw;
+  right: 10.11vw;
+  z-index: 1;
+}
+
+.product__img-lemon {
+  width: 37.01vw;
+  height: 32.08vw;
+  background-image: url("../img/product/lemon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 30.7vw;
+  right: 16vw;
+  position: absolute;
+  z-index: 2;
+}
+
+.product__img-ginger {
+  width: 34.44vw;
+  height: 28.33vw;
+  background-image: url("../img/product/ginger.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 18.9vw;
+  right: 3.4vw;
+  position: absolute;
+  z-index: 0;
+}
+
+.sale {
+  width: 100%;
+  height: 926px;
+  background-color: black;
 }
 
 .logo {
@@ -248,10 +333,8 @@ a:hover {
   }
 }
 
-@media (max-width: 1080px) {
-  .burger {
-    display: none;
-  }
+.burger {
+  display: none;
 }
 
 @media (max-width: 880px) {
