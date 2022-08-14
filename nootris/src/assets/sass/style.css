@@ -145,16 +145,6 @@ a:hover {
 }
 
 .product {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   padding: 4.31vw 0;
   background-image: url("../img/product/bg.png");
   background-position: center -81px;
@@ -162,10 +152,31 @@ a:hover {
   position: relative;
 }
 
+@media (max-width: 880px) {
+  .product {
+    padding: 2.31vw 0;
+  }
+}
+
+@media (max-width: 880px) {
+  .product__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .product__main-title {
   margin-top: 2.99vw;
   max-width: 70vw;
-  font-size: calc( (100vw - 320px)/(1440 - 320) * (144 - 20) + 20px);
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (144 - 28) + 28px);
   line-height: 10.56vw;
   font-weight: 700;
   margin-bottom: 2.15vw;
@@ -175,10 +186,18 @@ a:hover {
   text-transform: uppercase;
 }
 
+@media (max-width: 880px) {
+  .product__main-title {
+    text-align: center;
+    line-height: 9vw;
+    margin-bottom: 17vw;
+  }
+}
+
 .product__main-subtitle {
   max-width: 45vw;
   margin-bottom: 7.5vw;
-  font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 18) + 18px);
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 16) + 16px);
   line-height: 1.94vw;
 }
 
@@ -186,6 +205,22 @@ a:hover {
   .product__main-subtitle {
     max-width: 48vw;
     line-height: 20px;
+  }
+}
+
+@media (max-width: 880px) {
+  .product__main-subtitle {
+    max-width: 55vw;
+    text-align: center;
+    line-height: 17px;
+    margin-bottom: 6.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .product__main-subtitle {
+    margin-bottom: 5vw;
+    max-width: 85%;
   }
 }
 
@@ -200,6 +235,14 @@ a:hover {
 @media (max-width: 1080px) {
   .product__mini-title {
     line-height: 30px;
+  }
+}
+
+@media (max-width: 880px) {
+  .product__mini-title {
+    text-align: center;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -218,6 +261,21 @@ a:hover {
   }
 }
 
+@media (max-width: 880px) {
+  .product__mini-subtitle {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .product__mini-subtitle {
+    max-width: 85%;
+    margin-bottom: 18vw;
+  }
+}
+
 .product__img-nootris {
   background-image: url("../img/product/nootris.png");
   width: 15.56vw;
@@ -229,6 +287,16 @@ a:hover {
   top: 4.44vw;
   right: 10.11vw;
   z-index: 1;
+}
+
+@media (max-width: 880px) {
+  .product__img-nootris {
+    width: 10.83vw;
+    height: 30.83vw;
+    top: 16.5vw;
+    right: calc(50% - 4.65vw);
+    rotate: -90deg;
+  }
 }
 
 .product__img-lemon {
@@ -244,6 +312,23 @@ a:hover {
   z-index: 2;
 }
 
+@media (max-width: 880px) {
+  .product__img-lemon {
+    z-index: 0;
+    width: 25.90vw;
+    height: 22.43vw;
+    top: 82%;
+    left: 13.00vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .product__img-lemon {
+    left: 30vw;
+    z-index: 1;
+  }
+}
+
 .product__img-ginger {
   width: 34.44vw;
   height: 28.33vw;
@@ -255,6 +340,23 @@ a:hover {
   right: 3.4vw;
   position: absolute;
   z-index: 0;
+}
+
+@media (max-width: 880px) {
+  .product__img-ginger {
+    width: 24.10vw;
+    height: 19.79vw;
+    top: 82%;
+    right: 15.00vw;
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+  }
+}
+
+@media (max-width: 480px) {
+  .product__img-ginger {
+    right: 33vw;
+  }
 }
 
 .sale {

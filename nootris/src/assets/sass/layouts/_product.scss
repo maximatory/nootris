@@ -1,18 +1,26 @@
 .product {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 4.31vw 0;
   background-image: url('../img/product/bg.png');
   background-position: center -81px;
   background-repeat: no-repeat;
   position: relative;
+  @include tablet {
+    padding: 2.31vw 0;
+  }
+}
+
+.product__container {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .product__main-title {
   margin-top: 2.99vw;
   max-width: 70vw;
-  font-size: calc( (100vw - 320px)/(1440 - 320) * (144 - 20) + 20px);
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (144 - 28) + 28px);
   line-height: 10.56vw;
   font-weight: 700;
   margin-bottom: 2.15vw;
@@ -20,16 +28,31 @@
   position: relative;
   z-index: 2;
   text-transform: uppercase;
+  @include tablet {
+    text-align: center;
+    line-height: 9vw;
+    margin-bottom: 17vw;
+  }
 }
 
 .product__main-subtitle {
   max-width: 45vw;
   margin-bottom: 7.5vw;
-  font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 18) + 18px);
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 16) + 16px);
   line-height: 1.94vw;
   @include laptop {
     max-width: 48vw;
     line-height: 20px;
+  }
+  @include tablet {
+    max-width: 55vw;
+    text-align: center;
+    line-height: 17px;
+    margin-bottom: 6.5vw;
+  }
+  @include mobile {
+    margin-bottom: 5vw;
+    max-width: 85%;
   }
 }
 
@@ -42,6 +65,11 @@
   @include laptop {
     line-height: 30px;
   }
+  @include tablet {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .product__mini-subtitle {
@@ -53,6 +81,15 @@
   @include laptop {
     max-width: 30vw;
     line-height: 16px;
+  }
+  @include tablet {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  @include mobile {
+    max-width: 85%;
+    margin-bottom: 18vw;
   }
 }
 
@@ -67,6 +104,13 @@
   top: 4.44vw;
   right: 10.11vw;
   z-index: 1;
+  @include tablet {
+    width: 10.83vw;
+    height: 30.83vw;
+    top: 16.5vw;
+    right: calc(50% - 4.65vw);
+    rotate: -90deg;
+  }
 }
 
 .product__img-lemon {
@@ -80,6 +124,17 @@
   right: 16vw;
   position: absolute;
   z-index: 2;
+  @include tablet {
+    z-index: 0;
+    width: 25.90vw;
+    height: 22.43vw;
+    top: 82%;
+    left: 13.00vw;
+  }
+  @include mobile {
+    left: 30vw;
+    z-index: 1
+  }
 }
 
 .product__img-ginger {
@@ -93,4 +148,14 @@
   right: 3.4vw;
   position: absolute;
   z-index: 0;
+  @include tablet {
+    width: 24.10vw;
+    height: 19.79vw;
+    top: 82%;
+    right: 15.00vw;
+    transform: scale(-1, 1)
+  }
+  @include mobile {
+    right: 33vw;
+  }
 }
