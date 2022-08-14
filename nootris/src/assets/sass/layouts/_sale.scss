@@ -1,5 +1,129 @@
 .sale {
   width: 100%;
   height: 926px;
-  background-color: black;
+  background-color: $dark;
+  padding: 7.9vw 0;
+  color: $white;
+  text-align: center;
+  & span {
+    color: $orange;
+  }
+}
+
+.sale__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0.49vw;
+}
+
+.sale__main-title {
+  text-align: center;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (48 - 22) + 22px);
+  font-weight: 700;
+  line-height: 3.96vw;
+  text-transform: uppercase;
+  margin-bottom: 5.35vw;
+}
+
+.sale__price {
+  display: flex;
+  max-width: 19vw;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.4vw;
+  &--old {
+    color: $grey;
+    font-size: 36px;
+    position: relative;
+    margin-left: 1.5vw;
+  }
+  &--old::after{
+    content: "";
+    display: block;
+    width: 112px;
+    height: 2px;
+    background-color: $grey;
+    position: absolute;
+    top: 21px;
+    right: -12px;
+  }
+  &--new {
+    color: $white;
+    font-size: 48px;
+  }
+}
+
+//! description
+
+.sale__description {
+  display: grid;
+  grid-template-columns: 193px 480px 193px;
+  grid-template-rows: 168px 80px;
+  justify-items: center;
+  column-gap: 111px;
+  row-gap: 37px;
+  margin-bottom: 64px;
+}
+
+.sale__ginger-title, .sale__vorus-title {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.sale__ginger {
+  &-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: inherit;
+    width: 193px;
+    height: 160px;
+    transform: translateY(-0.21vw);
+  }
+  &-title {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: end;
+  }
+}
+
+.sale__vorus {
+  &-img {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 192px;
+    height: 160px;
+  }
+  &-title {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: end;
+  }
+}
+
+.sale__nootris {
+  &-img {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 480px;
+    height: 160px;
+  }
+  &-title {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: end;
+    font-size: 36px;
+    line-height: 39px;
+    transform: translate(-3px);
+  }
+  &-title span {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.sale__button {
+  width: 256px;
+  height: 56px;
 }

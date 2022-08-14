@@ -362,7 +362,180 @@ a:hover {
 .sale {
   width: 100%;
   height: 926px;
-  background-color: black;
+  background-color: #111111;
+  padding: 7.9vw 0;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.sale span {
+  color: #FCB500;
+}
+
+.sale__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0.49vw;
+}
+
+.sale__main-title {
+  text-align: center;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (48 - 22) + 22px);
+  font-weight: 700;
+  line-height: 3.96vw;
+  text-transform: uppercase;
+  margin-bottom: 5.35vw;
+}
+
+.sale__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 19vw;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3.4vw;
+}
+
+.sale__price--old {
+  color: #ADADAD;
+  font-size: 36px;
+  position: relative;
+  margin-left: 1.5vw;
+}
+
+.sale__price--old::after {
+  content: "";
+  display: block;
+  width: 112px;
+  height: 2px;
+  background-color: #ADADAD;
+  position: absolute;
+  top: 21px;
+  right: -12px;
+}
+
+.sale__price--new {
+  color: #FFFFFF;
+  font-size: 48px;
+}
+
+.sale__description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 193px 480px 193px;
+      grid-template-columns: 193px 480px 193px;
+  -ms-grid-rows: 168px 80px;
+      grid-template-rows: 168px 80px;
+  justify-items: center;
+  -webkit-column-gap: 111px;
+          column-gap: 111px;
+  row-gap: 37px;
+  margin-bottom: 64px;
+}
+
+.sale__ginger-title, .sale__vorus-title {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.sale__ginger-img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: inherit;
+  width: 193px;
+  height: 160px;
+  -webkit-transform: translateY(-0.21vw);
+          transform: translateY(-0.21vw);
+}
+
+.sale__ginger-title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.sale__vorus-img {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: 192px;
+  height: 160px;
+}
+
+.sale__vorus-title {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.sale__nootris-img {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: 480px;
+  height: 160px;
+}
+
+.sale__nootris-title {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 36px;
+  line-height: 39px;
+  -webkit-transform: translate(-3px);
+          transform: translate(-3px);
+}
+
+.sale__nootris-title span {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.sale__button {
+  width: 256px;
+  height: 56px;
 }
 
 .logo {
@@ -494,5 +667,22 @@ a:hover {
   background-color: #FFFFFF;
   position: absolute;
   bottom: 0;
+}
+
+.button {
+  border: none;
+  background-color: #FCB500;
+  color: #000;
+  border-radius: 7px;
+  padding: 16px 32px;
+  cursor: pointer;
+  line-height: 21px;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: #ADADAD;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
