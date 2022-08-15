@@ -1,15 +1,20 @@
 .product {
-  padding: 4.31vw 0;
+  padding: 62px 0;
   background-image: url('../img/product/bg.png');
+  background-color: $dark;
   background-position: center -81px;
   background-repeat: no-repeat;
-  position: relative;
+  background-size: auto;
+  @include max {
+    padding: 4.31vw 0;
+  }
   @include tablet {
     padding: 2.31vw 0;
   }
 }
 
 .product__container {
+  position: relative;
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -18,16 +23,22 @@
 }
 
 .product__main-title {
-  margin-top: 2.99vw;
-  max-width: 70vw;
-  font-size: calc( (100vw - 320px)/(1440 - 320) * (144 - 28) + 28px);
-  line-height: 10.56vw;
+  margin-top: 42px;
+  font-size: 144px;
+  line-height: 152px;
   font-weight: 700;
-  margin-bottom: 2.15vw;
+  margin-bottom: 31px;
   color: $white;
   position: relative;
   z-index: 2;
   text-transform: uppercase;
+  @include max {
+    margin-top: 2.99vw;
+    max-width: 70vw;
+    font-size: calc( (100vw - 320px)/(1440 - 320) * (144 - 28) + 28px);
+    line-height: 10.56vw;
+    margin-bottom: 2.15vw;
+  }
   @include tablet {
     text-align: center;
     line-height: 9vw;
@@ -36,10 +47,16 @@
 }
 
 .product__main-subtitle {
-  max-width: 45vw;
-  margin-bottom: 7.5vw;
-  font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 16) + 16px);
-  line-height: 1.94vw;
+  max-width: 659px;
+  margin-bottom: 109px;
+  font-size: 24px;
+  line-height: 28.44px;
+  @include max {
+    max-width: 45vw;
+    margin-bottom: 7.5vw;
+    font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 16) + 16px);
+    line-height: 1.94vw;
+  }
   @include laptop {
     max-width: 48vw;
     line-height: 20px;
@@ -57,11 +74,16 @@
 }
 
 .product__mini-title {
-  margin-bottom: 0.6vw;
+  margin-bottom: 7px;
   text-transform: uppercase;
-  font-size: calc( (100vw - 320px)/(1440 - 320) * (36 - 20) + 20px);
-  line-height: 2.92vw;
+  font-size: 36px;
+  line-height: 42.66px;
   font-weight: 700;
+  @include max {
+    margin-bottom: 0.6vw;
+    font-size: calc( (100vw - 320px)/(1440 - 320) * (36 - 20) + 20px);
+    line-height: 2.92vw;
+  }
   @include laptop {
     line-height: 30px;
   }
@@ -73,11 +95,17 @@
 }
 
 .product__mini-subtitle {
-  max-width: 24vw;
-  margin-bottom: 2.22vw;
-  font-size: calc( (100vw - 320px)/(1440 - 320) * (18 - 16) + 16px);
-  line-height: 1.46vw;
+  max-width: 410px;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 21.33px;
   font-weight: 400;
+  @include max {
+    max-width: 24vw;
+    margin-bottom: 2.22vw;
+    font-size: calc( (100vw - 320px)/(1440 - 320) * (18 - 16) + 16px);
+    line-height: 1.46vw;
+  }
   @include laptop {
     max-width: 30vw;
     line-height: 16px;
@@ -95,15 +123,21 @@
 
 .product__img-nootris {
   background-image: url('../img/product/nootris.png');
-  width: 15.56vw;
-  height: 44.10vw;
+  width: 224px;
+  height: 635px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: 4.44vw;
-  right: 10.11vw;
+  top: -42px;
+  right: 161px;
   z-index: 1;
+  @include max {
+    width: 15.56vw;
+    height: 44.10vw;
+    top: -3vw;
+    right: 11.1vw;
+  }
   @include tablet {
     width: 10.83vw;
     height: 30.83vw;
@@ -114,16 +148,22 @@
 }
 
 .product__img-lemon {
-  width: 37.01vw;
-  height: 32.08vw;
+  width: 533px;
+  height: 462px;
   background-image: url('../img/product/lemon.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 30.7vw;
-  right: 16vw;
+  top: 338px;
+  right: 245px;
   position: absolute;
   z-index: 2;
+  @include max {
+    width: 37.01vw;
+    height: 32.08vw;
+    top: 23.5vw;
+    right: 16.8vw;
+  }
   @include tablet {
     z-index: 0;
     width: 25.90vw;
@@ -138,16 +178,22 @@
 }
 
 .product__img-ginger {
-  width: 34.44vw;
-  height: 28.33vw;
+  width: 496px;
+  height: 408px;
   background-image: url('../img/product/ginger.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 18.9vw;
-  right: 3.4vw;
+  top: 170px;
+  right: 65px;
   position: absolute;
   z-index: 0;
+  @include max {
+    width: 34.44vw;
+    height: 28.33vw;
+    top: 11.8vw;
+    right: 4.4vw;
+  }
   @include tablet {
     width: 24.10vw;
     height: 19.79vw;

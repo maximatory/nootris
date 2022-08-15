@@ -6,7 +6,10 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  padding: 0 4.44vw;
+  padding: 0 64px;
+  @include max {
+    padding: 0 4.44vw;
+  }
 }
 
 h1 {
@@ -18,11 +21,15 @@ h1 {
 
 a {
   color: $white;
-  font-size: calc( (100vw - 880px)/(1440 - 880) * (18 - 16) + 16px);
-  line-height: 1.67vw;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 400;
   &:hover {
     transition: all 0.3s ease-in-out;
     color: $grey;
+  }
+  @include max {
+    font-size: calc( (100vw - 880px)/(1440 - 880) * (18 - 16) + 16px);
+    line-height: 1.67vw;
   }
 }
