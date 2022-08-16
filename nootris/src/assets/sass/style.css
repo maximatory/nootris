@@ -245,6 +245,13 @@ a:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .product__main-title {
+    margin-top: 29.17vw;
+    margin-bottom: 7vw;
+  }
+}
+
 .product__main-subtitle {
   max-width: 659px;
   margin-bottom: 109px;
@@ -279,7 +286,7 @@ a:hover {
 
 @media (max-width: 480px) {
   .product__main-subtitle {
-    margin-bottom: 5vw;
+    margin-bottom: 7vw;
     max-width: 85%;
   }
 }
@@ -349,7 +356,7 @@ a:hover {
 @media (max-width: 480px) {
   .product__mini-subtitle {
     max-width: 85%;
-    margin-bottom: 18vw;
+    margin-bottom: 27vw;
   }
 }
 
@@ -377,11 +384,19 @@ a:hover {
 
 @media (max-width: 880px) {
   .product__img-nootris {
-    width: 10.83vw;
-    height: 30.83vw;
-    top: 16.5vw;
-    right: calc(50% - 4.65vw);
+    top: 3.5vw;
+    right: calc(50% - 7.78vw);
     rotate: -90deg;
+  }
+}
+
+@media (max-width: 480px) {
+  .product__img-nootris {
+    width: 17.11vw;
+    height: 48.51vw;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    right: calc(50% - 8.55vw);
   }
 }
 
@@ -410,15 +425,14 @@ a:hover {
 @media (max-width: 880px) {
   .product__img-lemon {
     z-index: 0;
-    width: 25.90vw;
-    height: 22.43vw;
-    top: 82%;
-    left: 13.00vw;
+    top: 70%;
+    left: 1vw;
   }
 }
 
 @media (max-width: 480px) {
   .product__img-lemon {
+    top: 78%;
     left: 30vw;
     z-index: 1;
   }
@@ -448,10 +462,8 @@ a:hover {
 
 @media (max-width: 880px) {
   .product__img-ginger {
-    width: 24.10vw;
-    height: 19.79vw;
-    top: 82%;
-    right: 15.00vw;
+    top: 70%;
+    right: 1vw;
     -webkit-transform: scale(-1, 1);
             transform: scale(-1, 1);
   }
@@ -459,7 +471,7 @@ a:hover {
 
 @media (max-width: 480px) {
   .product__img-ginger {
-    right: 33vw;
+    display: none;
   }
 }
 
@@ -642,13 +654,16 @@ a:hover {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
         grid-template-areas: 'nootris nootris' 'noot-text noot-text' 'ginger vorus' 'ginger-text vorus-text';
-    gap: 30px;
+    -webkit-column-gap: 0px;
+            column-gap: 0px;
+    row-gap: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .sale__description {
         grid-template-areas: 'nootris' 'noot-text' 'ginger' 'ginger-text' 'vorus' 'vorus-text';
+    row-gap: 30px;
   }
 }
 
@@ -774,8 +789,15 @@ a:hover {
             transform: rotate(90deg);
     margin: 70px 0;
     grid-area: nootris;
-    min-width: 288px;
-    min-height: 96px;
+    width: 70%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sale__nootris-img {
+    min-width: 259px;
+    min-height: 86px;
   }
 }
 

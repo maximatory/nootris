@@ -16,7 +16,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // margin-left: 0.49vw;
 }
 
 .sale__main-title {
@@ -121,7 +120,8 @@
     'noot-text noot-text'
     'ginger vorus'
     'ginger-text vorus-text';
-    gap: 30px;
+    column-gap: 0px;
+    row-gap: 30px;
   }
   @include mobile {
     grid-template-areas:
@@ -130,7 +130,8 @@
     'ginger'
     'ginger-text'
     'vorus'
-    'vorus-text'
+    'vorus-text';
+    row-gap: 30px;
   }
 }
 
@@ -208,8 +209,12 @@
       transform: rotate(90deg);
       margin: 70px 0;
       grid-area: nootris;
-      min-width: 288px;
-      min-height: 96px;
+      width: 70%;
+      height: auto;
+    }
+    @include mobile {
+      min-width: 259px;
+      min-height: 86px;
     }
   }
   &-title {

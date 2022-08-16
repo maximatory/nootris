@@ -44,6 +44,10 @@
     line-height: 9vw;
     margin-bottom: 17vw;
   }
+  @include mobile {
+    margin-top: 29.17vw;
+    margin-bottom: 7vw;
+  }
 }
 
 .product__main-subtitle {
@@ -68,7 +72,7 @@
     margin-bottom: 6.5vw;
   }
   @include mobile {
-    margin-bottom: 5vw;
+    margin-bottom: 7vw;
     max-width: 85%;
   }
 }
@@ -117,7 +121,7 @@
   }
   @include mobile {
     max-width: 85%;
-    margin-bottom: 18vw;
+    margin-bottom: 27vw;
   }
 }
 
@@ -139,11 +143,15 @@
     right: 11.1vw;
   }
   @include tablet {
-    width: 10.83vw;
-    height: 30.83vw;
-    top: 16.5vw;
-    right: calc(50% - 4.65vw);
+    top: 3.5vw;
+    right: calc(50% - 7.78vw);
     rotate: -90deg;
+  }
+  @include mobile {
+    width: 17.11vw;
+    height: 48.51vw;
+    transform: rotate(90deg);
+    right: calc(50% - 8.55vw);
   }
 }
 
@@ -166,12 +174,11 @@
   }
   @include tablet {
     z-index: 0;
-    width: 25.90vw;
-    height: 22.43vw;
-    top: 82%;
-    left: 13.00vw;
+    top: 70%;
+    left: 1vw;
   }
   @include mobile {
+    top: 78%;
     left: 30vw;
     z-index: 1
   }
@@ -195,13 +202,11 @@
     right: 4.4vw;
   }
   @include tablet {
-    width: 24.10vw;
-    height: 19.79vw;
-    top: 82%;
-    right: 15.00vw;
+    top: 70%;
+    right: 1vw;
     transform: scale(-1, 1)
   }
   @include mobile {
-    right: 33vw;
+    display: none;
   }
 }
