@@ -31,28 +31,43 @@
     line-height: 3.96vw;
     margin-bottom: 5.35vw;
   }
+  @include tablet {
+    line-height: 40px;
+  }
 }
 
 .sale__price {
   display: flex;
-  max-width: 272px;
-  width: 100%;
+  width: 272px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 34px;
   @include max {
-    max-width: 19vw;
     margin-bottom: 3.4vw;
+  }
+  @include desctop {
+    width: 23%;
+    gap: 15px;
+  }
+  @include tablet {
+    width: auto;
   }
 }
 
 .sale__price--old {
   color: $grey;
-  font-size: 36px;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (36 - 20) + 20px);
   position: relative;
   margin-left: 22px;
   @include max {
     margin-left: 1.5vw;
+  }
+  @include desctop {
+    margin-left: 15px;
+  }
+  @include tablet {
+    text-decoration: line-through;
+    margin-left: 0;
   }
 }
 
@@ -65,11 +80,19 @@
   position: absolute;
   top: 21px;
   right: -12px;
+  @include max {
+    width: 7.78vw;
+    top: 1.46vw;
+    right: -0.83vw;
+  }
+  @include tablet {
+    display: none;
+  }
 }
 
 .sale__price--new {
   color: $white;
-  font-size: 48px;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (48 - 24) + 24px);
 }
 
 //! description
@@ -82,10 +105,37 @@
   column-gap: 111px;
   row-gap: 37px;
   margin-bottom: 64px;
+  @include max {
+    grid-template-columns: 13.40vw 33.33vw 13.40vw;
+    grid-template-rows: 11.67vw 5.56vw;
+    column-gap: 7.71vw;
+    row-gap: 2.57vw;
+    margin-bottom: 4.44vw;
+  }
+  @include tablet {
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-auto-rows: min-content;
+    grid-template-areas:
+    'nootris nootris'
+    'noot-text noot-text'
+    'ginger vorus'
+    'ginger-text vorus-text';
+    gap: 30px;
+  }
+  @include mobile {
+    grid-template-areas:
+    'nootris'
+    'noot-text'
+    'ginger'
+    'ginger-text'
+    'vorus'
+    'vorus-text'
+  }
 }
 
 .sale__ginger-title, .sale__vorus-title {
-  font-size: 18px;
+  font-size: calc( (100vw - 320px)/(1440 - 320) * (18 - 16) + 16px);
   line-height: 21px;
 }
 
@@ -98,13 +148,23 @@
     height: 160px;
     transform: translateY(-7px);
     @include max {
+      width: 13.40vw;
+      height: 11.11vw;
       transform: translateY(-0.21vw);
+    }
+    @include tablet {
+      grid-area: ginger;
+      min-width: 114px;
+      min-height: 100px;
     }
   }
   &-title {
     grid-column: 1/2;
     grid-row: 2/3;
     align-self: end;
+    @include tablet {
+      grid-area: ginger-text;
+    }
   }
 }
 
@@ -114,11 +174,23 @@
     grid-row: 1/2;
     width: 192px;
     height: 160px;
+    @include max {
+      width: 13.40vw;
+      height: 11.11vw;
+    }
+    @include tablet {
+      grid-area: vorus;
+      min-width: 115px;
+      min-height: 96px;
+    }
   }
   &-title {
     grid-column: 3/4;
     grid-row: 2/3;
     align-self: end;
+    @include tablet {
+      grid-area: vorus-text;
+    }
   }
 }
 
@@ -128,22 +200,47 @@
     grid-row: 1/2;
     width: 480px;
     height: 160px;
+    @include max {
+      width: 33.33vw;
+      height: 11.11vw;
+    }
+    @include tablet {
+      transform: rotate(90deg);
+      margin: 70px 0;
+      grid-area: nootris;
+      min-width: 288px;
+      min-height: 96px;
+    }
   }
   &-title {
     grid-column: 2/3;
     grid-row: 2/3;
     align-self: end;
-    font-size: 36px;
+    font-size: calc( (100vw - 320px)/(1440 - 320) * (36 - 20) + 20px);
     line-height: 39px;
     transform: translate(-3px);
+    @include max {
+      line-height: 2.71vw;
+    }
+    @include tablet {
+      grid-area: noot-text;
+      line-height: 20px;
+    }
   }
   &-title span {
-    font-size: 24px;
+    font-size: calc( (100vw - 320px)/(1440 - 320) * (24 - 18) + 18px);
     line-height: 28px;
+    @include max {
+      line-height: 1.94vw;
+    }
   }
 }
 
 .sale__button {
   width: 256px;
   height: 56px;
+  @include tablet {
+    width: 179px;
+    height: 56px;
+  }
 }

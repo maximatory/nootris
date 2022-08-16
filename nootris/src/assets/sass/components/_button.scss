@@ -11,4 +11,7 @@
     background-color: $grey;
     transition: all 0.3s ease-in-out;
   }
+  @include tablet {
+    padding: 10px 15px;
+  }
 }
